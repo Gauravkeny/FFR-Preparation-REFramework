@@ -68,7 +68,6 @@
       <AssemblyReference>System.ValueTuple</AssemblyReference>
       <AssemblyReference>System.Memory</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationCore</AssemblyReference>
       <AssemblyReference>System.Reflection.Metadata</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
@@ -79,7 +78,7 @@
       <AssemblyReference>UiPath.OCR.Activities</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="376,447" sap2010:WorkflowViewState.IdRef="Sequence_9">
+  <Sequence sap2010:Annotation.AnnotationText="Open applications used in the process and do necessary initialization procedures (e.g., login)." DisplayName="Initialize All Applications" sap:VirtualizedContainerService.HintSize="376,316" sap2010:WorkflowViewState.IdRef="Sequence_9">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -90,13 +89,13 @@
     <ui:RetryScope DisplayName="Retry Scope - Open PPT File" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="RetryScope_1">
       <ui:RetryScope.ActivityBody>
         <ActivityAction>
-          <Sequence DisplayName="Action - Opening PPT File" sap:VirtualizedContainerService.HintSize="476,396" sap2010:WorkflowViewState.IdRef="Sequence_10">
+          <Sequence DisplayName="Action - Opening PPT File" sap:VirtualizedContainerService.HintSize="242,143" sap2010:WorkflowViewState.IdRef="Sequence_10">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Application: AC FFR PPT - PowerPoint" sap:VirtualizedContainerService.HintSize="434,304" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="2c879904-f5d5-4d54-9fa1-b1154737662d" Version="V1" WindowResize="Maximize">
+            <uix:NApplicationCard WebDriverMode="{x:Null}" AttachMode="ByInstance" CloseMode="Never" DisplayName="Open Application: AC FFR PPT - PowerPoint" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="NApplicationCard_1" ScopeGuid="2c879904-f5d5-4d54-9fa1-b1154737662d" Version="V1" WindowResize="Maximize">
               <uix:NApplicationCard.Body>
                 <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
@@ -105,11 +104,11 @@
                 </ActivityAction>
               </uix:NApplicationCard.Body>
               <uix:NApplicationCard.TargetApp>
-                <uix:TargetApp Area="-8, -8, 1382, 744" Arguments="C:\Users\gaura\Desktop\FFR Data\Intermediate Data\AC FFR PPT.pptx" FilePath="C:\Program Files\Microsoft Office\Office16\powerpnt.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIxSURBVFhH5ZfBSxtREIdzLfgHCAUvJvFUKiKBojc1VnuoRaHYa8GDBARBsNiDYEUvlUAhBy+l3jwWSs+Fnjw1iRuLBqIhBlNRkCIao3WcmcyTR9hs3sJmq/jBD3aHt/v7jC8bNuAVyb72VjlsLqmB4CNMJNUfnMB8SvYFf2D5IQZkiXdsDoafYN6kB0Mf0tHQ1/RAKIvlwOmvBgUw7Ry5zD3WcEebNdTxAjNjDYXXNp+Hf2EAyzkoACgAKFAtb4IAYLkES6n8PgrwGrPsY+ak3jsBUypHJZaQev8FCLqf1DdP4Pd4L+QXp/gvrqUpAlREhVSsSiiZ0W4oF3I8UzQUOMtacL67LcurlPNZKHx8V1eAilQpoY4p+YUYzxQ0k3p7ASeKiQVbAb2Q0M8zr7p4pqCZ1DsLlD6vwPbbKOzH38P1vyueXRT3jAScMBYoLE/f7oHT1AbPri8rDQX0WC+f8nU6NJd6c4GzHYtnV6d/XQnszU/ydTo0l/rG/4JsbARKX+IyATj+vm4roG9CFf4G4OatxViglsqfImyN99gK8NcQd/vW62ccOrZ7BhDGAhcHBQ59/Ifrq5AZixg/iJwwFtD3gK+PYoUbAV7jEB06l/o7+gmonfvfBDguf4x4jUN06FzqvRNww8MWoEc53u9E6v3bA1pOMEtS752A3M49KKBeTGZRwP8Xk3pgeSeGXs2WUOAbCuR8FbADy1sw6uU0gQI/sfzYN4F6oMBjOXRBIHAD/kEhPwNJ9BwAAAAASUVORK5CYII=" InformativeScreenshot="16ad5e8dc1d7ba08d1159e0f10882b00.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='powerpnt.exe' cls='PPTFrameClass' title='AC FFR PPT - PowerPoint'/&gt;" />
+                <uix:TargetApp Area="-8, -8, 1382, 744" Arguments="[in_Config(&quot;Presentation Data&quot;).ToString]" FilePath="C:\Program Files\Microsoft Office\Office16\powerpnt.exe" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAIxSURBVFhH5ZfBSxtREIdzLfgHCAUvJvFUKiKBojc1VnuoRaHYa8GDBARBsNiDYEUvlUAhBy+l3jwWSs+Fnjw1iRuLBqIhBlNRkCIao3WcmcyTR9hs3sJmq/jBD3aHt/v7jC8bNuAVyb72VjlsLqmB4CNMJNUfnMB8SvYFf2D5IQZkiXdsDoafYN6kB0Mf0tHQ1/RAKIvlwOmvBgUw7Ry5zD3WcEebNdTxAjNjDYXXNp+Hf2EAyzkoACgAKFAtb4IAYLkES6n8PgrwGrPsY+ak3jsBUypHJZaQev8FCLqf1DdP4Pd4L+QXp/gvrqUpAlREhVSsSiiZ0W4oF3I8UzQUOMtacL67LcurlPNZKHx8V1eAilQpoY4p+YUYzxQ0k3p7ASeKiQVbAb2Q0M8zr7p4pqCZ1DsLlD6vwPbbKOzH38P1vyueXRT3jAScMBYoLE/f7oHT1AbPri8rDQX0WC+f8nU6NJd6c4GzHYtnV6d/XQnszU/ydTo0l/rG/4JsbARKX+IyATj+vm4roG9CFf4G4OatxViglsqfImyN99gK8NcQd/vW62ccOrZ7BhDGAhcHBQ59/Ifrq5AZixg/iJwwFtD3gK+PYoUbAV7jEB06l/o7+gmonfvfBDguf4x4jUN06FzqvRNww8MWoEc53u9E6v3bA1pOMEtS752A3M49KKBeTGZRwP8Xk3pgeSeGXs2WUOAbCuR8FbADy1sw6uU0gQI/sfzYN4F6oMBjOXRBIHAD/kEhPwNJ9BwAAAAASUVORK5CYII=" InformativeScreenshot="16ad5e8dc1d7ba08d1159e0f10882b00.png" IsExactTitleEnabled="True" Selector="&lt;wnd app='powerpnt.exe' cls='PPTFrameClass' title='AC FFR PPT - PowerPoint'/&gt;" />
               </uix:NApplicationCard.TargetApp>
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -121,7 +120,7 @@
         <ActivityFunc x:TypeArguments="x:Boolean">
           <ui:UiElementExists Exists="{x:Null}" DisplayName="Element Exists - Title PowerPoint" sap:VirtualizedContainerService.HintSize="334,106" sap2010:WorkflowViewState.IdRef="UiElementExists_1">
             <ui:UiElementExists.Target>
-              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c26a1cc-a9a8-4c99-a122-121da629f218" InformativeScreenshot="dd10722fb494e14dcdccb61b92550472" Selector="&lt;wnd app='powerpnt.exe' cls='PPTFrameClass' title='AC FFR PPT - PowerPoint' /&gt;&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;">
+              <ui:Target ClippingRegion="{x:Null}" Element="{x:Null}" Id="2c26a1cc-a9a8-4c99-a122-121da629f218" InformativeScreenshot="dd10722fb494e14dcdccb61b92550472" Selector="&lt;wnd app='powerpnt.exe' cls='PPTFrameClass' title='AC FFR PPT*- PowerPoint' /&gt;&lt;uia cls='MsoCommandBar' name='Ribbon' /&gt;&lt;uia cls='NetUIOfficeCaption' /&gt;">
                 <ui:Target.TimeoutMS>
                   <InArgument x:TypeArguments="x:Int32" />
                 </ui:Target.TimeoutMS>
@@ -140,6 +139,5 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:RetryScope>
-    <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_2" Level="Trace" Message="[&quot;Opened FFR PPT&quot;]" />
   </Sequence>
 </Activity>

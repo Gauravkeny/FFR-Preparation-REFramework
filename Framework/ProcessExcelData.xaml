@@ -7,7 +7,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,1220</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>837,1220</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>ProcessTransaction_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="50">
@@ -83,7 +83,6 @@
       <AssemblyReference>System.Data.DataSetExtensions</AssemblyReference>
       <AssemblyReference>System.Data.Entity</AssemblyReference>
       <AssemblyReference>System.Collections.Immutable</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
   <Sequence sap2010:Annotation.AnnotationText="Invoke major steps of the business process, which are usually implemented by multiple subworkflows.&#xA;&#xA;If a BusinessRuleException is thrown, the transaction is skipped. &#xA;If another kind of exception occurs, the current transaction can be retried. " DisplayName="Process" sap:VirtualizedContainerService.HintSize="847,1155" sap2010:WorkflowViewState.IdRef="Sequence_1">
@@ -298,7 +297,7 @@
                                                     <av:PointCollection x:Key="ConnectorLocation">106,632 106,719.52 190,719.52</av:PointCollection>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <Sequence DisplayName="Sequence - Faults Value = 0" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_9">
+                                                <Sequence DisplayName="Sequence - Faults Value = 0" sap:VirtualizedContainerService.HintSize="518,760" sap2010:WorkflowViewState.IdRef="Sequence_9">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -773,7 +772,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[G3 isNot Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID35" sap2010:Annotation.AnnotationText="Run This Activity when G3 isNot Nothing" DisplayName="3 Table Working" sap:VirtualizedContainerService.HintSize="1102,1119" sap2010:WorkflowViewState.IdRef="State_3">
+                    <State x:Name="__ReferenceID35" sap2010:Annotation.AnnotationText="Run This Activity when G3 isNot Nothing" DisplayName="3 Table Working" sap:VirtualizedContainerService.HintSize="135,122" sap2010:WorkflowViewState.IdRef="State_3">
                       <State.Entry>
                         <Sequence DisplayName="3 Table Working FFR Data" sap:VirtualizedContainerService.HintSize="1056,728" sap2010:WorkflowViewState.IdRef="Sequence_34">
                           <sap:WorkflowViewStateService.ViewState>
@@ -964,10 +963,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                                         </Sequence>
                                       </Sequence>
                                       <FlowStep.Next>
-                                        <FlowDecision x:Name="__ReferenceID20" DisplayName="Faults Value = 0" sap:VirtualizedContainerService.HintSize="88,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
-                                          <FlowDecision.Condition>
-                                            <mva:VisualBasicValue x:TypeArguments="x:Boolean" ExpressionText="OM_Value.ToString.Equals(in_Config(&quot;Previous_OM_Month&quot;).ToString)" />
-                                          </FlowDecision.Condition>
+                                        <FlowDecision x:Name="__ReferenceID20" Condition="[OM_Value.ToString.Equals(in_Config(&quot;Previous_OM_Month&quot;).ToString)]" DisplayName="Faults Value = 0" sap:VirtualizedContainerService.HintSize="88,87" sap2010:WorkflowViewState.IdRef="FlowDecision_2">
                                           <sap:WorkflowViewStateService.ViewState>
                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1805,7 +1801,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                   </sap:WorkflowViewStateService.ViewState>
                   <Transition.Condition>[G3 is Nothing And E3 is Nothing]</Transition.Condition>
                   <Transition.To>
-                    <State x:Name="__ReferenceID37" sap2010:Annotation.AnnotationText="This Activity will be a working for 1 Table Activity" DisplayName="1 Table Working" sap:VirtualizedContainerService.HintSize="134,118" sap2010:WorkflowViewState.IdRef="State_4">
+                    <State x:Name="__ReferenceID37" sap2010:Annotation.AnnotationText="This Activity will be a working for 1 Table Activity" DisplayName="1 Table Working" sap:VirtualizedContainerService.HintSize="704,1223" sap2010:WorkflowViewState.IdRef="State_4">
                       <State.Entry>
                         <Flowchart DisplayName="Flowchart___1_Table_Working" sap:VirtualizedContainerService.HintSize="658,832" sap2010:WorkflowViewState.IdRef="Flowchart_4">
                           <Flowchart.Variables>
@@ -1849,7 +1845,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                                     <av:PointCollection x:Key="ConnectorLocation">300,294.5 300,344.5</av:PointCollection>
                                   </scg:Dictionary>
                                 </sap:WorkflowViewStateService.ViewState>
-                                <Sequence DisplayName="Sequence - Writing All Values" sap:VirtualizedContainerService.HintSize="476,1014" sap2010:WorkflowViewState.IdRef="Sequence_35">
+                                <Sequence DisplayName="Sequence - Writing All Values" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_35">
                                   <sap:WorkflowViewStateService.ViewState>
                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1924,7 +1920,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                                                 <av:Size x:Key="ShapeSize">200,66</av:Size>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Sequence DisplayName="Sequence - Faults Value = 0" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_40">
+                                            <Sequence DisplayName="Sequence - Faults Value = 0" sap:VirtualizedContainerService.HintSize="518,760" sap2010:WorkflowViewState.IdRef="Sequence_40">
                                               <sap:WorkflowViewStateService.ViewState>
                                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1941,7 +1937,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
-                                                <ui:ExcelReadRange AddHeaders="True" DataTable="[Faults_Update]" DisplayName="Read Range - G8 - G30" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" Range="G8:G30" SheetName="[in_TransactionItem]">
+                                                <ui:ExcelReadRange AddHeaders="True" DataTable="[Faults_Update]" DisplayName="Read Range - E8 - E30" sap:VirtualizedContainerService.HintSize="434,59" sap2010:WorkflowViewState.IdRef="ExcelReadRange_6" Range="E8:E30" SheetName="[in_TransactionItem]">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -2027,7 +2023,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:ForEachRow>
-                                                <ui:ExcelWriteRange AddHeaders="True" DataTable="[Faults_Update]" DisplayName="Write Range - 0 to all values" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_5" SheetName="[in_TransactionItem]" StartingCell="G8">
+                                                <ui:ExcelWriteRange AddHeaders="True" DataTable="[Faults_Update]" DisplayName="Write Range - 0 to all values" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ExcelWriteRange_5" SheetName="[in_TransactionItem]" StartingCell="E8">
                                                   <sap:WorkflowViewStateService.ViewState>
                                                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -2056,7 +2052,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                                                 <av:Size x:Key="ShapeSize">200,66</av:Size>
                                               </scg:Dictionary>
                                             </sap:WorkflowViewStateService.ViewState>
-                                            <Sequence DisplayName="Sequence - Faults Value &gt; 0" sap:VirtualizedContainerService.HintSize="476,878" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                                            <Sequence DisplayName="Sequence - Faults Value &gt; 0" sap:VirtualizedContainerService.HintSize="200,66" sap2010:WorkflowViewState.IdRef="Sequence_46">
                                               <Sequence.Variables>
                                                 <Variable x:TypeArguments="sd:DataTable" Name="Faults_Data" />
                                                 <Variable x:TypeArguments="sd:DataTable" Name="MoCoParts" />
@@ -2067,7 +2063,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                 </scg:Dictionary>
                                               </sap:WorkflowViewStateService.ViewState>
-                                              <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Faults_Data]" DisplayName="Read Range - Faults_Data" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Raw Data" WorkbookPath="C:\Users\gaura\Desktop\FFR Data\Intermediate Data\Faults_Data.xlsx">
+                                              <ui:ReadRange Range="{x:Null}" AddHeaders="True" DataTable="[Faults_Data]" DisplayName="Read Range - Faults_Data" sap:VirtualizedContainerService.HintSize="434,87" sap2010:WorkflowViewState.IdRef="ReadRange_3" SheetName="Raw Data" WorkbookPath="[in_Config(&quot;Intermediate_Faults_Data&quot;).ToString]">
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
@@ -2112,7 +2108,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:FilterDataTable>
-                                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Faults_Data]" DisplayName="For Each Row in Data Table - Faults_Data" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
+                                              <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[Faults_Data]" DisplayName="For Each Row in Data Table - Faults_Data" sap:VirtualizedContainerService.HintSize="434,392" sap2010:WorkflowViewState.IdRef="ForEachRow_8">
                                                 <ui:ForEachRow.Body>
                                                   <ActivityAction x:TypeArguments="sd:DataRow">
                                                     <ActivityAction.Argument>
@@ -2138,7 +2134,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                                                 <sap:WorkflowViewStateService.ViewState>
                                                   <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                     <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                    <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                    <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                   </scg:Dictionary>
                                                 </sap:WorkflowViewStateService.ViewState>
                                               </ui:ForEachRow>
@@ -2203,15 +2199,15 @@ Select Faults_Update.Rows.Add({a,xCount})
                                                     </scg:Dictionary>
                                                   </sap:WorkflowViewStateService.ViewState>
                                                 </ui:AddDataColumn>
-                                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[For_Update]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
+                                                <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" DataTable="[For_Update]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="434,589" sap2010:WorkflowViewState.IdRef="ForEachRow_9">
                                                   <ui:ForEachRow.Body>
                                                     <ActivityAction x:TypeArguments="sd:DataRow">
                                                       <ActivityAction.Argument>
                                                         <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
                                                       </ActivityAction.Argument>
-                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="242,234" sap2010:WorkflowViewState.IdRef="Sequence_44">
+                                                      <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="376,474" sap2010:WorkflowViewState.IdRef="Sequence_44">
                                                         <Sequence.Variables>
-                                                          <Variable x:TypeArguments="x:String" Name="For_Value" />
+                                                          <Variable x:TypeArguments="x:Object" Name="For_Value" />
                                                         </Sequence.Variables>
                                                         <sap:WorkflowViewStateService.ViewState>
                                                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
@@ -2219,18 +2215,18 @@ Select Faults_Update.Rows.Add({a,xCount})
                                                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                                           </scg:Dictionary>
                                                         </sap:WorkflowViewStateService.ViewState>
-                                                        <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[Faults_Update]" DisplayName="Lookup Data Table - Faults_Update and Get the Value" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="LookupDataTable_3" LookupColumnName="Consolidated Parts" LookupValue="[CurrentRow(&quot;Part Description&quot;).ToString]" TargetColumnName="Count of Parts">
+                                                        <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[Faults_Update]" DisplayName="Lookup Data Table - Faults_Update and Get the Value" sap:VirtualizedContainerService.HintSize="334,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_3" LookupColumnName="Consolidated Parts" LookupValue="[CurrentRow(&quot;Part Description&quot;).ToString]" TargetColumnName="Count of Parts">
                                                           <ui:LookupDataTable.CellValue>
-                                                            <OutArgument x:TypeArguments="x:String">[For_Value]</OutArgument>
+                                                            <OutArgument x:TypeArguments="x:Object">[For_Value]</OutArgument>
                                                           </ui:LookupDataTable.CellValue>
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
-                                                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                                             </scg:Dictionary>
                                                           </sap:WorkflowViewStateService.ViewState>
                                                         </ui:LookupDataTable>
-                                                        <If Condition="[For_Value isNot Nothing]" DisplayName="If - Value is something than Enter" sap:VirtualizedContainerService.HintSize="200,51" sap2010:WorkflowViewState.IdRef="If_7">
+                                                        <If Condition="[For_Value isNot Nothing]" DisplayName="If - Value is something than Enter" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="If_7">
                                                           <sap:WorkflowViewStateService.ViewState>
                                                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                                               <x:Boolean x:Key="IsPinned">False</x:Boolean>

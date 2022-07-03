@@ -10,7 +10,7 @@
   <mva:VisualBasic.Settings>
     <x:Null />
   </mva:VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>1240,4993</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>1240,5266</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Merging_Data_for_As_per_Sheet_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <scg:List x:TypeArguments="x:String" Capacity="32">
@@ -79,9 +79,11 @@
       <AssemblyReference>System.ComponentModel.Composition</AssemblyReference>
       <AssemblyReference>NPOI</AssemblyReference>
       <AssemblyReference>UiPath.System.Activities.Design</AssemblyReference>
+      <AssemblyReference>System.Data.Entity</AssemblyReference>
+      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Merging_Data_for_As_per_Sheet" sap:VirtualizedContainerService.HintSize="741,4928" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Merging_Data_for_As_per_Sheet" sap:VirtualizedContainerService.HintSize="741,5201" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="Reading Data fro Masters Data" Name="As_Per_Sheet" />
       <Variable x:TypeArguments="sd:DataTable" sap2010:Annotation.AnnotationText="Final Update of Population and Faults for All used Models in preparation" Name="Final_As_Per_Sheet" />
@@ -140,26 +142,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ExcelApplicationScope>
-    <Assign sap2010:Annotation.AnnotationText="This Value Helps to Update Row Item in As_Per_Sheet Data it Increments itself 1 by 1 as row is Updated" DisplayName="Assign - Increment_First" sap:VirtualizedContainerService.HintSize="699,117" sap2010:WorkflowViewState.IdRef="Assign_14">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:Int32">[Increment_First]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">0</InArgument>
-      </Assign.Value>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Performing a Vlookup Activity with In_Population_Data and Updating Population Value in As_Per_Sheet Data Table" DataTable="[As_Per_Sheet]" DisplayName="For Each Row in As_Per_Sheet" sap:VirtualizedContainerService.HintSize="699,138" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Performing a Vlookup Activity with In_Population_Data and Updating Population Value in As_Per_Sheet Data Table" DataTable="[As_Per_Sheet]" DisplayName="For Each Row in As_Per_Sheet" sap:VirtualizedContainerService.HintSize="699,770" sap2010:WorkflowViewState.IdRef="ForEachRow_11">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body - As Per Sheet" sap:VirtualizedContainerService.HintSize="476,574" sap2010:WorkflowViewState.IdRef="Sequence_48">
+          <Sequence DisplayName="Body - As Per Sheet" sap:VirtualizedContainerService.HintSize="476,613" sap2010:WorkflowViewState.IdRef="Sequence_48">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Object" sap2010:Annotation.AnnotationText="Used in as a variable for vlookup Value of As_Pr_Sheet Data with population Data to Get Population" Name="Population_first" />
             </Sequence.Variables>
@@ -168,7 +157,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[In_Population_Data]" DisplayName="Lookup Data Table - Population Data" sap:VirtualizedContainerService.HintSize="434,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_12" LookupColumnName="Model " LookupValue="[CurrentRow(&quot;Model&quot;).ToString]" TargetColumnName="[&quot;IW POP &quot;+in_Config(&quot;Current_OM_Month&quot;).ToString+&quot;_21-22&quot;]">
+            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[In_Population_Data]" DisplayName="Lookup Data Table - Population Data" sap:VirtualizedContainerService.HintSize="434,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_12" LookupColumnName="Model " LookupValue="[CurrentRow(&quot;Model&quot;).ToString]" TargetColumnName="[&quot;IW POP &quot;+in_Config(&quot;For_Population&quot;).ToString+&quot;_22-23&quot;]">
               <ui:LookupDataTable.CellValue>
                 <OutArgument x:TypeArguments="x:Object">[Population_first]</OutArgument>
               </ui:LookupDataTable.CellValue>
@@ -179,29 +168,21 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LookupDataTable>
-            <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Population" DisplayName="Update Row Item - Population in As_Per_Sheet Data" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="UpdateRowItem_16" Row="[As_Per_Sheet.Rows(Increment_First)]" Value="[Population_first]">
+            <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Population" DisplayName="Update Row Item - Population in As_Per_Sheet Data" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="UpdateRowItem_16" Row="[CurrentRow]" Value="[Population_first]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UpdateRowItem>
-            <Assign DisplayName="Assign - Increment_First+1" sap:VirtualizedContainerService.HintSize="434,60" sap2010:WorkflowViewState.IdRef="Assign_16">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Int32">[Increment_First]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Int32">[Increment_First+1]</InArgument>
-              </Assign.Value>
-            </Assign>
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -294,12 +275,12 @@
         </Sequence>
       </If.Else>
     </If>
-    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter Population Data and Select Population Values Greater Than 500 and Save the Variable as PopGrt5" DataTable="[In_Population_Data]" DisplayName="Filter Data Table - Population Data" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="699,123" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" OutputDataTable="[PopGrt5]" SelectColumnsMode="Keep">
+    <ui:FilterDataTable sap2010:Annotation.AnnotationText="Filter Population Data and Select Population Values Greater Than 500 and Save the Variable as PopGrt5" DataTable="[In_Population_Data]" DisplayName="Filter Data Table - Population Data" FilterRowsMode="Keep" sap:VirtualizedContainerService.HintSize="699,202" sap2010:WorkflowViewState.IdRef="FilterDataTable_8" OutputDataTable="[PopGrt5]" SelectColumnsMode="Keep">
       <ui:FilterDataTable.Filters>
         <scg:List x:TypeArguments="ui:FilterOperationArgument" Capacity="4">
           <ui:FilterOperationArgument BooleanOperator="And" Operator="GTE">
             <ui:FilterOperationArgument.Column>
-              <InArgument x:TypeArguments="x:String">["IW POP "+in_Config("Current_OM_Month").ToString+"_21-22"]</InArgument>
+              <InArgument x:TypeArguments="x:String">["IW POP "+in_Config("For_Population").ToString+"_22-23"]</InArgument>
             </ui:FilterOperationArgument.Column>
             <ui:FilterOperationArgument.Operand>
               <InArgument x:TypeArguments="x:Int32">[500]</InArgument>
@@ -315,7 +296,7 @@
       <sap:WorkflowViewStateService.ViewState>
         <scg:Dictionary x:TypeArguments="x:String, x:Object">
           <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-          <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+          <x:Boolean x:Key="IsExpanded">True</x:Boolean>
           <x:Boolean x:Key="IsPinned">False</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
@@ -551,26 +532,13 @@
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
     </ui:ReadRange>
-    <Assign sap2010:Annotation.AnnotationText="Assign Increment second for Updation of Final_As_Per_Sheet Data Table" DisplayName="Assign - Increment_Second" sap:VirtualizedContainerService.HintSize="699,102" sap2010:WorkflowViewState.IdRef="Assign_17">
-      <Assign.To>
-        <OutArgument x:TypeArguments="x:Int32">[Increment_Second]</OutArgument>
-      </Assign.To>
-      <Assign.Value>
-        <InArgument x:TypeArguments="x:Int32">0</InArgument>
-      </Assign.Value>
-      <sap:WorkflowViewStateService.ViewState>
-        <scg:Dictionary x:TypeArguments="x:String, x:Object">
-          <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
-        </scg:Dictionary>
-      </sap:WorkflowViewStateService.ViewState>
-    </Assign>
-    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Updating population and Faults Value in Final_As_Per_Sheet Data Table" DataTable="[Final_As_Per_Sheet]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="699,1080" sap2010:WorkflowViewState.IdRef="ForEachRow_15">
+    <ui:ForEachRow ColumnNames="{x:Null}" CurrentIndex="{x:Null}" sap2010:Annotation.AnnotationText="Updating population and Faults Value in Final_As_Per_Sheet Data Table" DataTable="[Final_As_Per_Sheet]" DisplayName="For Each Row in Data Table" sap:VirtualizedContainerService.HintSize="699,941" sap2010:WorkflowViewState.IdRef="ForEachRow_15">
       <ui:ForEachRow.Body>
         <ActivityAction x:TypeArguments="sd:DataRow">
           <ActivityAction.Argument>
             <DelegateInArgument x:TypeArguments="sd:DataRow" Name="CurrentRow" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Body - Final Updating of Final_As_PerSheet Data Table" sap:VirtualizedContainerService.HintSize="526,929" sap2010:WorkflowViewState.IdRef="Sequence_64">
+          <Sequence DisplayName="Body - Final Updating of Final_As_PerSheet Data Table" sap:VirtualizedContainerService.HintSize="476,795" sap2010:WorkflowViewState.IdRef="Sequence_64">
             <Sequence.Variables>
               <Variable x:TypeArguments="x:Object" sap2010:Annotation.AnnotationText="Population Value For Final_As_Per_Sheet Data Table" Name="Population_Second" />
               <Variable x:TypeArguments="x:Object" sap2010:Annotation.AnnotationText="Contains No of Faults for each Model and is used one by 1 in Lookupdata Table Activity" Name="Faults_Count" />
@@ -580,7 +548,7 @@
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[In_Population_Data]" DisplayName="Lookup Data Table - In_Population_Data" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="LookupDataTable_14" LookupColumnName="Model " LookupValue="[CurrentRow(&quot;Model&quot;).ToString]" TargetColumnName="[&quot;IW POP &quot;+in_Config(&quot;Current_OM_Month&quot;).ToString+&quot;_21-22&quot;]">
+            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[In_Population_Data]" DisplayName="Lookup Data Table - In_Population_Data" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="LookupDataTable_14" LookupColumnName="Model " LookupValue="[CurrentRow(&quot;Model&quot;).ToString]" TargetColumnName="[&quot;IW POP &quot;+in_Config(&quot;For_Population&quot;).ToString+&quot;_22-23&quot;]">
               <ui:LookupDataTable.CellValue>
                 <OutArgument x:TypeArguments="x:Object">[Population_Second]</OutArgument>
               </ui:LookupDataTable.CellValue>
@@ -591,15 +559,15 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LookupDataTable>
-            <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Population" DisplayName="Update Row Item - Population in Final_As_Per_Sheet Data Table" sap:VirtualizedContainerService.HintSize="484,51" sap2010:WorkflowViewState.IdRef="UpdateRowItem_17" Row="[Final_As_Per_Sheet.Rows(Increment_Second)]" Value="[CInt(Population_Second)]">
+            <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Population" DisplayName="Update Row Item - Population in Final_As_Per_Sheet Data Table" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="UpdateRowItem_17" Row="[CurrentRow]" Value="[CInt(Population_Second)]">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:UpdateRowItem>
-            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[Faults_Data]" DisplayName="Lookup Data Table - In_Population_Data" sap:VirtualizedContainerService.HintSize="484,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_15" LookupColumnName="Row Labels" LookupValue="[CurrentRow(&quot;Model&quot;).ToString]" TargetColumnName="Sum of Complaint Count">
+            <ui:LookupDataTable LookupColumnIndex="{x:Null}" LookupDataColumn="{x:Null}" RowIndex="{x:Null}" TargetColumnIndex="{x:Null}" TargetDataColumn="{x:Null}" DataTable="[Faults_Data]" DisplayName="Lookup Data Table - In_Population_Data" sap:VirtualizedContainerService.HintSize="434,291" sap2010:WorkflowViewState.IdRef="LookupDataTable_15" LookupColumnName="Row Labels" LookupValue="[CurrentRow(&quot;Model&quot;).ToString]" TargetColumnName="Sum of Complaint Count">
               <ui:LookupDataTable.CellValue>
                 <OutArgument x:TypeArguments="x:Object">[Faults_Count]</OutArgument>
               </ui:LookupDataTable.CellValue>
@@ -610,10 +578,10 @@
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
             </ui:LookupDataTable>
-            <If Condition="[Faults_Count IsNot Nothing]" DisplayName="Updating Faults Value" sap:VirtualizedContainerService.HintSize="484,224" sap2010:WorkflowViewState.IdRef="If_19">
+            <If Condition="[Faults_Count IsNot Nothing]" DisplayName="Updating Faults Value" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="If_19">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
@@ -625,10 +593,10 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Faults" DisplayName="Update Row Item - Population in Final_As_Per_Sheet Data Table" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="UpdateRowItem_18" Row="[Final_As_Per_Sheet.Rows(Increment_Second)]" Value="[CInt(Faults_Count)]">
+                  <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Faults" DisplayName="Update Row Item - Population in Final_As_Per_Sheet Data Table" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="UpdateRowItem_18" Row="[CurrentRow]" Value="[CInt(Faults_Count)]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -643,10 +611,10 @@
                       <x:Boolean x:Key="IsPinned">False</x:Boolean>
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
-                  <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Faults" DisplayName="Update Row Item - Population in Final_As_Per_Sheet Data Table" sap:VirtualizedContainerService.HintSize="434,190" sap2010:WorkflowViewState.IdRef="UpdateRowItem_19" Row="[Final_As_Per_Sheet.Rows(Increment_Second)]" Value="[CInt(0)]">
+                  <ui:UpdateRowItem ColumnIndex="{x:Null}" ColumnName="Faults" DisplayName="Update Row Item - Population in Final_As_Per_Sheet Data Table" sap:VirtualizedContainerService.HintSize="434,51" sap2010:WorkflowViewState.IdRef="UpdateRowItem_19" Row="[CurrentRow]" Value="[CInt(0)]">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                        <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                        <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                         <x:Boolean x:Key="IsPinned">False</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
@@ -654,14 +622,6 @@
                 </Sequence>
               </If.Else>
             </If>
-            <Assign DisplayName="Assign - Increment_Second+1" sap:VirtualizedContainerService.HintSize="484,60" sap2010:WorkflowViewState.IdRef="Assign_18">
-              <Assign.To>
-                <OutArgument x:TypeArguments="x:Int32">[Increment_Second]</OutArgument>
-              </Assign.To>
-              <Assign.Value>
-                <InArgument x:TypeArguments="x:Int32">[Increment_Second+1]</InArgument>
-              </Assign.Value>
-            </Assign>
           </Sequence>
         </ActivityAction>
       </ui:ForEachRow.Body>
@@ -704,7 +664,7 @@
               <InArgument x:TypeArguments="x:Int32">1</InArgument>
             </Assign.Value>
           </Assign>
-          <ui:InterruptibleWhile Condition="[Increment_Third &lt;= Add_List.Count]" DisplayName="While - Add List Exists" sap:VirtualizedContainerService.HintSize="412,542" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
+          <ui:InterruptibleWhile CurrentIndex="{x:Null}" Condition="[Increment_Third &lt;= Add_List.Count]" DisplayName="While - Add List Exists" sap:VirtualizedContainerService.HintSize="412,542" sap2010:WorkflowViewState.IdRef="InterruptibleWhile_1">
             <ui:InterruptibleWhile.Body>
               <Sequence DisplayName="Body - Add_Lst" sap:VirtualizedContainerService.HintSize="376,377" sap2010:WorkflowViewState.IdRef="Sequence_70">
                 <sap:WorkflowViewStateService.ViewState>
