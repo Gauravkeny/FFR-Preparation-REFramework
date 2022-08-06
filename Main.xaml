@@ -99,15 +99,14 @@
       <AssemblyReference>UiPath.UIAutomationNext</AssemblyReference>
       <AssemblyReference>UiPath.UIAutomationNext.Activities</AssemblyReference>
       <AssemblyReference>UiPath.Platform</AssemblyReference>
-      <AssemblyReference>System.Runtime.WindowsRuntime</AssemblyReference>
     </scg:List>
   </TextExpression.ReferencesForImplementation>
-  <StateMachine InitialState="{x:Reference __ReferenceID9}" sap2010:Annotation.AnnotationText="[FFR Automation]&#xA;[Creation of FFR Automation Using RE Framework]&#xA;[1.) Add All The Data to the Added Data Folder, &#xA;[2.) Do not Touch the Intermediate Data Folder, &#xA;[3.) After the Automation is completed all the data will get added to Final Folder,]&#xA;[4.) Update the Config File Only for Added Data Rest Data keep it same, &#xA;[5.) Dont Touch Any of the File Path Until and Unless it is very much necessary.&#xA;[6.) You need to Only Add Faults And  Population Data,&#xA;[7.) Change Faults Data Sheet Name to TopNFailure,&#xA;[8.) Take Care the Data must be Read from B8 Cell.]" DisplayName="General Business Process - FFR Automation REFramework" sap:VirtualizedContainerService.HintSize="1001,903" sap2010:WorkflowViewState.IdRef="StateMachine_1">
+  <StateMachine InitialState="{x:Reference __ReferenceID9}" sap2010:Annotation.AnnotationText="[FFR Automation]&#xA;[Creation of FFR Automation Using RE Framework&#xA;[1.) Add All The Data to the Added Data Folder, &#xA;[2.) Do not Touch the Intermediate Data Folder, &#xA;[3.) After the Automation is completed all the data will get added to Final Folder,&#xA;[4.) Update the Config File Only for Added Data Rest Data keep it same, &#xA;[5.) Dont Touch Any of the File Path Until and Unless it is very much necessary,&#xA;[6.) You need to Only Add Faults And  Population Data,&#xA;[7.) Change Faults Data Sheet Name to TopNFailure,&#xA;[8.) Take Care the Data must be Read from B8 Cell.]" DisplayName="General Business Process - FFR Automation REFramework" sap:VirtualizedContainerService.HintSize="1014,903" sap2010:WorkflowViewState.IdRef="StateMachine_1">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         <av:Point x:Key="ShapeLocation">70,22.5</av:Point>
-        <x:Double x:Key="StateContainerWidth">967</x:Double>
+        <x:Double x:Key="StateContainerWidth">980</x:Double>
         <x:Double x:Key="StateContainerHeight">705</x:Double>
         <av:PointCollection x:Key="ConnectorLocation">130,60 130,58.1666666666667 223,58.1666666666667</av:PointCollection>
         <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -411,7 +410,7 @@
                 <Transition DisplayName="System Exception" sap:VirtualizedContainerService.HintSize="451.333333333333,521.333333333333" sap2010:WorkflowViewState.IdRef="Transition_4">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">303.633333333333,627.666666666667 303.633333333333,657 533.5,657 533.5,63.3166666666667 477,63.3166666666667</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">303.633333333333,627.666666666667 303.633333333333,667 532.5,667 532.5,63.3166666666667 477,63.3166666666667</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">23</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">40</x:Int32>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -962,7 +961,7 @@
                 <Transition sap2010:Annotation.AnnotationText="Business Rule Exception" DisplayName="Business Exception" sap:VirtualizedContainerService.HintSize="448.8,537.6" sap2010:WorkflowViewState.IdRef="Transition_1">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                      <av:PointCollection x:Key="ConnectorLocation">361.383333333333,627.666666666667 361.383333333333,665 572.5,665 572.5,245.933333333333 475.333333333333,245.933333333333</av:PointCollection>
+                      <av:PointCollection x:Key="ConnectorLocation">361.383333333333,627.666666666667 361.383333333333,683 577.5,683 577.5,245.933333333333 475.333333333333,245.933333333333</av:PointCollection>
                       <x:Int32 x:Key="SrcConnectionPointIndex">43</x:Int32>
                       <x:Int32 x:Key="DestConnectionPointIndex">20</x:Int32>
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1000,7 +999,7 @@
         <Transition sap2010:Annotation.AnnotationText="This is a simple mecanism to stop the process.&#xA;In reallife scenario you can stop the process when there is no more data to process or on a schedule." DisplayName="No Data" sap:VirtualizedContainerService.HintSize="450,857" sap2010:WorkflowViewState.IdRef="Transition_7">
           <sap:WorkflowViewStateService.ViewState>
             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-              <av:PointCollection x:Key="ConnectorLocation">349.833333333333,324.333333333333 349.833333333333,345.45 583,345.45 583,75.45 613,75.45</av:PointCollection>
+              <av:PointCollection x:Key="ConnectorLocation">349.833333333333,324.333333333333 349.833333333333,345 595.5,345 595.5,75.45 613,75.45</av:PointCollection>
               <x:Int32 x:Key="SrcConnectionPointIndex">39</x:Int32>
               <x:Int32 x:Key="DestConnectionPointIndex">49</x:Int32>
               <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1010,7 +1009,7 @@
           <Transition.To>
             <State x:Name="__ReferenceID5" sap2010:Annotation.AnnotationText="Read configuration file and initialize applications used in the process." DisplayName="Initialization - PPT Data" sap:VirtualizedContainerService.HintSize="254,103" sap2010:WorkflowViewState.IdRef="State_7">
               <State.Entry>
-                <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="640,2017" sap2010:WorkflowViewState.IdRef="TryCatch_18">
+                <TryCatch DisplayName="Try initializing settings and applications" sap:VirtualizedContainerService.HintSize="866,4782" sap2010:WorkflowViewState.IdRef="TryCatch_18">
                   <sap:WorkflowViewStateService.ViewState>
                     <scg:Dictionary x:TypeArguments="x:String, x:Object">
                       <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -1018,14 +1017,14 @@
                     </scg:Dictionary>
                   </sap:WorkflowViewStateService.ViewState>
                   <TryCatch.Try>
-                    <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="602,1790" sap2010:WorkflowViewState.IdRef="Sequence_38">
+                    <Sequence DisplayName="Load configurations and open applications" sap:VirtualizedContainerService.HintSize="828,4555" sap2010:WorkflowViewState.IdRef="Sequence_38">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                           <x:Boolean x:Key="IsPinned">False</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="560,60" sap2010:WorkflowViewState.IdRef="Assign_34">
+                      <Assign DisplayName="Assign SystemException (initialization)" sap:VirtualizedContainerService.HintSize="786,60" sap2010:WorkflowViewState.IdRef="Assign_34">
                         <Assign.To>
                           <OutArgument x:TypeArguments="s:Exception">[SystemException]</OutArgument>
                         </Assign.To>
@@ -1033,28 +1032,28 @@
                           <InArgument x:TypeArguments="s:Exception">[Nothing]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitiAllApplications workflow" sap:VirtualizedContainerService.HintSize="560,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
+                      <ui:InvokeWorkflowFile ArgumentsVariable="{x:Null}" ContinueOnError="{x:Null}" DisplayName="Invoke InitiAllApplications workflow" sap:VirtualizedContainerService.HintSize="786,112" sap2010:WorkflowViewState.IdRef="InvokeWorkflowFile_52" UnSafe="False" WorkflowFileName="Framework\InitAllApplications.xaml">
                         <ui:InvokeWorkflowFile.Arguments>
                           <InArgument x:TypeArguments="scg:Dictionary(x:String, x:Object)" x:Key="in_Config">[Config]</InArgument>
                         </ui:InvokeWorkflowFile.Arguments>
                       </ui:InvokeWorkflowFile>
-                      <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[PDF_Init_Run = 1]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="560,108" sap2010:WorkflowViewState.IdRef="If_18">
+                      <If sap2010:Annotation.AnnotationText="An uninitialized Config dictionary indicates that it is the first run of the process." Condition="[PDF_Init_Run = 1]" DisplayName="If first run, read local configuration file" sap:VirtualizedContainerService.HintSize="786,3822" sap2010:WorkflowViewState.IdRef="If_18">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
                         <If.Then>
-                          <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="304,640" sap2010:WorkflowViewState.IdRef="Sequence_37">
+                          <Sequence DisplayName="First run" sap:VirtualizedContainerService.HintSize="750,3604" sap2010:WorkflowViewState.IdRef="Sequence_37">
                             <sap:WorkflowViewStateService.ViewState>
                               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 <x:Boolean x:Key="IsPinned">False</x:Boolean>
                               </scg:Dictionary>
                             </sap:WorkflowViewStateService.ViewState>
-                            <Assign DisplayName="Assign - PDF_Init_Run = 2" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_38">
+                            <Assign DisplayName="Assign - PDF_Init_Run = 2" sap:VirtualizedContainerService.HintSize="708,60" sap2010:WorkflowViewState.IdRef="Assign_38">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Int32">[PDF_Init_Run]</OutArgument>
                               </Assign.To>
@@ -1062,7 +1061,7 @@
                                 <InArgument x:TypeArguments="x:Int32">2</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign DisplayName="Assign - TransactionNumber" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_41">
+                            <Assign DisplayName="Assign - TransactionNumber" sap:VirtualizedContainerService.HintSize="708,60" sap2010:WorkflowViewState.IdRef="Assign_41">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:Int32">[TransactionNumber]</OutArgument>
                               </Assign.To>
@@ -1070,7 +1069,7 @@
                                 <InArgument x:TypeArguments="x:Int32">1</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <Assign DisplayName="Assign - WorkingWith" sap:VirtualizedContainerService.HintSize="262,60" sap2010:WorkflowViewState.IdRef="Assign_42">
+                            <Assign DisplayName="Assign - WorkingWith" sap:VirtualizedContainerService.HintSize="708,60" sap2010:WorkflowViewState.IdRef="Assign_42">
                               <Assign.To>
                                 <OutArgument x:TypeArguments="x:String">[WorkingWith]</OutArgument>
                               </Assign.To>
@@ -1078,13 +1077,13 @@
                                 <InArgument x:TypeArguments="x:String">PPT Data</InArgument>
                               </Assign.Value>
                             </Assign>
-                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window - PPT Data" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="c8801da35faac3a090b25d027dfcfe0b" Selector="&lt;wnd app='powerpnt.exe' cls='PPTFrameClass' title='AC FFR PPT - PowerPoint' /&gt;">
+                            <ui:WindowScope ApplicationWindow="{x:Null}" SearchScope="{x:Null}" TimeoutMS="{x:Null}" Window="{x:Null}" DisplayName="Attach Window - PPT Data" sap:VirtualizedContainerService.HintSize="708,51" sap2010:WorkflowViewState.IdRef="WindowScope_1" InformativeScreenshot="c8801da35faac3a090b25d027dfcfe0b" Selector="&lt;wnd app='powerpnt.exe' cls='PPTFrameClass' title='AC FFR PPT - PowerPoint' /&gt;">
                               <ui:WindowScope.Body>
                                 <ActivityAction x:TypeArguments="x:Object">
                                   <ActivityAction.Argument>
                                     <DelegateInArgument x:TypeArguments="x:Object" Name="ContextTarget" />
                                   </ActivityAction.Argument>
-                                  <Sequence DisplayName="Do - FFR Data Automation" sap:VirtualizedContainerService.HintSize="526,425" sap2010:WorkflowViewState.IdRef="Sequence_91">
+                                  <Sequence DisplayName="Do - FFR Data Automation" sap:VirtualizedContainerService.HintSize="526,905" sap2010:WorkflowViewState.IdRef="Sequence_91">
                                     <Sequence.Variables>
                                       <Variable x:TypeArguments="x:Int32" Name="Increment_10Slide" />
                                       <Variable x:TypeArguments="x:Boolean" Name="SelectionPaneExists" />
@@ -1237,7 +1236,7 @@
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
                             </ui:WindowScope>
-                            <Sequence sap2010:Annotation.AnnotationText="This Activity Adds Pivot Table to the Faults Data, with value as SUM OF Complaint Count, Modelcode as Filter, Consolidated Parts as Row." DisplayName="Sequence - Adding Pivot Table" sap:VirtualizedContainerService.HintSize="262,66" sap2010:WorkflowViewState.IdRef="Sequence_87">
+                            <Sequence sap2010:Annotation.AnnotationText="This Activity Adds Pivot Table to the Faults Data, with value as SUM OF Complaint Count, Modelcode as Filter, Consolidated Parts as Row." DisplayName="Sequence - Adding Pivot Table" sap:VirtualizedContainerService.HintSize="708,66" sap2010:WorkflowViewState.IdRef="Sequence_87">
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                                   <x:Boolean x:Key="IsExpanded">False</x:Boolean>
@@ -1307,7 +1306,7 @@
                                 </sap:WorkflowViewStateService.ViewState>
                               </ueab:ExcelProcessScopeX>
                             </Sequence>
-                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Run Data" sap:VirtualizedContainerService.HintSize="262,51" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" WorkbookPath="[Config(&quot;Intermediate FFR_Data&quot;).ToString]">
+                            <ui:ExcelApplicationScope Password="{x:Null}" DisplayName="Excel Application Scope - Run Data" sap:VirtualizedContainerService.HintSize="708,3015" sap2010:WorkflowViewState.IdRef="ExcelApplicationScope_3" InstanceCachePeriod="3000" Visible="False" WorkbookPath="[Config(&quot;Intermediate FFR_Data&quot;).ToString]">
                               <ui:ExcelApplicationScope.Body>
                                 <ActivityAction x:TypeArguments="ui:WorkbookApplication">
                                   <ActivityAction.Argument>
@@ -1880,7 +1879,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                               </ui:ExcelApplicationScope.Body>
                               <sap:WorkflowViewStateService.ViewState>
                                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                                  <x:Boolean x:Key="IsExpanded">False</x:Boolean>
+                                  <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                   <x:Boolean x:Key="IsPinned">False</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
@@ -1888,7 +1887,7 @@ Select Faults_Update.Rows.Add({a,xCount})
                           </Sequence>
                         </If.Then>
                       </If>
-                      <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="560,243" sap2010:WorkflowViewState.IdRef="If_19">
+                      <If sap2010:Annotation.AnnotationText="If MaxConsecutiveSystemExceptions number was reached, throw Exception at initialization and go to End Process state, thus finalizing the execution. &#xA;If MaxConsecutiveSystemExceptions is 0, then any number of consecutive System Exceptions is allowed." Condition="[Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))&gt;0 AndAlso ConsecutiveSystemExceptions&gt;=Cint(Config(&quot;MaxConsecutiveSystemExceptions&quot;))]" DisplayName="If maxConsecutiveSystemExceptions exceeded" sap:VirtualizedContainerService.HintSize="786,243" sap2010:WorkflowViewState.IdRef="If_19">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
                             <x:Boolean x:Key="IsAnnotationDocked">True</x:Boolean>
@@ -1900,15 +1899,15 @@ Select Faults_Update.Rows.Add({a,xCount})
                           <Throw DisplayName="Throw Consecutive Exceptions exceeded" Exception="[new Exception(Config(&quot;ExceptionMessage_ConsecutiveErrors&quot;).ToString + &quot; Consecutive retry number: &quot; + (ConsecutiveSystemExceptions+1).ToString)]" sap:VirtualizedContainerService.HintSize="200,22" sap2010:WorkflowViewState.IdRef="Throw_2" />
                         </If.Then>
                       </If>
-                      <Sequence DisplayName="Sequence - Opening PPT Data" sap:VirtualizedContainerService.HintSize="560,1015" sap2010:WorkflowViewState.IdRef="Sequence_93">
+                      <Sequence DisplayName="Sequence - Opening FFR Data" sap:VirtualizedContainerService.HintSize="786,66" sap2010:WorkflowViewState.IdRef="Sequence_93">
                         <sap:WorkflowViewStateService.ViewState>
                           <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                            <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                            <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                             <x:Boolean x:Key="IsPinned">False</x:Boolean>
                           </scg:Dictionary>
                         </sap:WorkflowViewStateService.ViewState>
-                        <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="518,91" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="Trace" Message="[&quot;Opened FFR Data&quot;]" />
-                        <ui:RetryScope DisplayName="Retry Scope - Opening FFR Data" sap:VirtualizedContainerService.HintSize="518,661" sap2010:WorkflowViewState.IdRef="RetryScope_1">
+                        <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_50" Level="Trace" Message="[&quot;Opened FFR Data&quot;]" />
+                        <ui:RetryScope DisplayName="Retry Scope - Opening FFR Data" sap:VirtualizedContainerService.HintSize="334,51" sap2010:WorkflowViewState.IdRef="RetryScope_1">
                           <ui:RetryScope.ActivityBody>
                             <ActivityAction>
                               <Sequence DisplayName="Action - Opening FFR Data" sap:VirtualizedContainerService.HintSize="476,396" sap2010:WorkflowViewState.IdRef="Sequence_92">
@@ -1956,17 +1955,17 @@ Select Faults_Update.Rows.Add({a,xCount})
                           </ui:RetryScope.Condition>
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
-                              <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              <x:Boolean x:Key="IsExpanded">False</x:Boolean>
                               <x:Boolean x:Key="IsPinned">False</x:Boolean>
                             </scg:Dictionary>
                           </sap:WorkflowViewStateService.ViewState>
                         </ui:RetryScope>
-                        <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="518,91" sap2010:WorkflowViewState.IdRef="LogMessage_51" Level="Trace" Message="[&quot;Opened Both The Applications.&quot;]" />
+                        <ui:LogMessage DisplayName="Log message (Initialize applications)" sap:VirtualizedContainerService.HintSize="334,91" sap2010:WorkflowViewState.IdRef="LogMessage_51" Level="Trace" Message="[&quot;Opened Both The Applications.&quot;]" />
                       </Sequence>
                     </Sequence>
                   </TryCatch.Try>
                   <TryCatch.Catches>
-                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="606,21" sap2010:WorkflowViewState.IdRef="Catch`1_20">
+                    <Catch x:TypeArguments="s:Exception" sap:VirtualizedContainerService.HintSize="832,21" sap2010:WorkflowViewState.IdRef="Catch`1_20">
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">False</x:Boolean>

@@ -10,4 +10,5 @@ Sub Copying_Table(Model)
     Range(Selection, Selection.End(xlToRight)).Select
     Range(Selection, Selection.End(xlUp)).Select
     Selection.Copy
+    Selection.Copy
 End Sub
